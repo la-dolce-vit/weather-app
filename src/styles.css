@@ -7,14 +7,11 @@ div.heading {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 2;
 }
-
 li {
   list-style: none;
   margin: 0 auto;
   text-align: center;
-  padding: 0px;
 }
-
 form {
   border-color: #68b2eb;
   display: inline;
@@ -29,7 +26,7 @@ i {
 .container {
   text-align: center;
   margin: 0 auto;
-  padding: 30px;
+  padding: 40px;
 }
 .card {
   width: 400px;
@@ -45,12 +42,12 @@ input {
 }
 .days {
   color: #323232;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 20px;
 }
 .celsius {
   color: #757575;
-  font-size: 13px;
+  font-size: 12px;
 }
 #heading-third {
   margin-top: 7px;
@@ -62,7 +59,6 @@ input {
 #heading-first {
   color: #323232;
 }
-
 #paragraph {
   color: #757575;
   font-size: 15px;
