@@ -27,10 +27,6 @@ function search(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayWeather);
-  //let searchotherInput = document.querySelector("#input");
-  //let searchInput = document.querySelector("#input");
-  // let city = document.querySelector("#heading-first");
-  // city.innerHTML = `Hello! The weather in ${searchInput.value} is...`;
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);

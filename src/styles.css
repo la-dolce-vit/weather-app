@@ -15,17 +15,6 @@ li {
   padding: 0px;
 }
 
-p {
-  color: #757575;
-  font-size: 15px;
-  font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
-  margin-bottom: 20px;
-  line-height: 1.7;
-}
-
 form {
   border-color: #68b2eb;
   display: inline;
@@ -39,8 +28,10 @@ i {
 }
 .container {
   text-align: center;
+  margin
 }
 .card {
+  width: 400px;
   border-color: #ffffff;
   border-width: 1px;
   border-radius: 17px;
@@ -56,6 +47,7 @@ input {
 .days {
   color: #323232;
   font-size: 16px;
+  margin-top: 20px;
 }
 .celsius {
   color: #757575;
@@ -70,4 +62,13 @@ input {
 }
 #heading-first {
   color: #323232;
+}
+
+#paragraph {
+  color: #757575;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
