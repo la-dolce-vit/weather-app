@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/styles.css" class="ref" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/a0a7b73d8a.js" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+                <h1>
+                    <div class="heading">
+                        <li id="heading-null">
+                            <i class="fas fa-cloud-sun"></i> </li>
+                        <li id="heading-first"> Moscow, Russia </li>
+                        <li id="heading-second"> Sunday 21:00 </li>
+                        </ul>
+                    </div>
+                    <form id="search-form">
+                        <input type="text" style="
+                text-align: center;
+                border-color:#68b2eb;
+                border-width: 3px;
+                font-size: 14px;
+                padding: 5px 20px;
+              " id="input" ; placeholder="Search another city" autocomplete="off" autofocus="on" />
+                    </form>
+
+                    <div class="heading">
+                        <span id="heading-third"> 22</span>°C
+                    </div>
+
+                    <p>
+                        Mostly cloudy
+                        <br />
+
+                        <span id="humidity"></span>
+
+                        <br /> <span id="wind"></span>
+
+                    </p>
+                    <div class="days">
+                        <div class="row">
+                            <div class="col - 6">
+                                Mon
+                            </div>
+                            <div class="col - 6">
+                                Tue
+                            </div>
+                            <div class="col - 6">
+                                Wed
+                            </div>
+                            <div class="col - 6">
+                                Thur
+                            </div>
+                            <div class="col - 6">
+                                Fri
+                            </div>
+                        </div>
+                    </div>
+                    <div class="celsius">
+                        <div class="row">
+                            <div class="col - 6">
+                                26°
+                            </div>
+                            <div class="col - 6">
+                                27°
+                            </div>
+                            <div class="col - 6">
+                                27°
+                            </div>
+                            <div class="col - 6">
+                                28°
+                            </div>
+                            <div class="col - 6">
+                                28°
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col - 6">
+                            <i class="fas fa-cloud-rain"></i>
+                        </div>
+                        <div class="col - 6">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="col - 6">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="col - 6">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="col - 6">
+                            <i class="fas fa-cloud-rain"></i>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="src/index.js"></script>
+</body>
+</html>
