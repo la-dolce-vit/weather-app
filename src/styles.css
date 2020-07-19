@@ -38,7 +38,7 @@ i {
   text-align: center;
   margin: 0 auto;
   margin-top: 40px;
-  padding: 10px 20px;
+  padding: 10px;
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 input {
@@ -46,12 +46,12 @@ input {
 }
 .days {
   color: #323232;
-  font-size: 16px;
+  font-size: 15px;
   margin-top: 20px;
 }
 .celsius {
   color: #757575;
-  font-size: 14px;
+  font-size: 13px;
 }
 #heading-third {
   margin-top: 7px;
