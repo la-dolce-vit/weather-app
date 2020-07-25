@@ -16,9 +16,11 @@ time.innerHTML = `${day} ${hour}:${minutes}`;
 
 function displayWeather(response) {
   document.querySelector("#heading-first").innerHTML = response.data.name;
-  document.querySelector("#heading-third").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  let temperature = Math.round(response.data.main.temp);
+  let update = response.data.weather[0].main;
+  document.querySelector(
+    "#heading-third"
+  ).innerHTML = `${update} ${temperature}°C`;
 }
 function search(event) {
   event.preventDefault();
@@ -32,8 +34,8 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let update = response.data.weather[0].main;
+  let currentTemperature = Math.round(response.data.main.temp);
+  let currentUpdate = response.data.weather[0].main;
   let currentWind = response.data.wind.speed;
   let currentWindheading = document.querySelector("#wind");
   currentWindheading.innerHTML = `Wind: ${currentWind}km/h`;
@@ -44,7 +46,7 @@ function showTemperature(response) {
   let countryHeading = document.querySelector("#heading-first");
   countryHeading.innerHTML = `${currentCountry}`;
   let heading = document.querySelector("#heading-third");
-  heading.innerHTML = `${update} ${temperature}`;
+  heading.innerHTML = `${currentUpdate} ${currentTemperature}°C`;
 }
 function showPosition(position) {
   let latitude = position.coords.latitude;

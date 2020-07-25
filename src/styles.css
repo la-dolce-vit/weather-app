@@ -10,18 +10,19 @@ div.heading {
   line-height: 2;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
 li {
   list-style: none;
-  margin: 0 auto;
   text-align: center;
 }
 form {
   border-color: #68b2eb;
   display: inline;
 }
-.heading {
-  margin-top: 10px;
-}
+
 i {
   font-size: 23px;
   color: #1976d2;
@@ -45,21 +46,32 @@ input {
 .days {
   color: #323232;
   font-size: 15px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .celsius {
   color: #757575;
   font-size: 13px;
 }
-#heading-third {
-  margin-top: 7px;
-}
-#heading-second {
-  margin-bottom: -5px;
+.headings {
   color: #323232;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+#heading-null {
+  margin-bottom: 7px;
+  margin-top: 5px;
 }
 #heading-first {
-  color: #323232;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+#heading-third {
+  margin-top: 15px;
+}
+#heading-second {
+  margin-bottom: 15px;
 }
 #paragraph {
   color: #757575;
