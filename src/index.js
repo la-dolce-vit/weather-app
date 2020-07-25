@@ -21,16 +21,16 @@ if (hour < 10) {
   hour = `0${hour}`;
 }
 function displayWeather(response) {
-  document.querySelector("#heading-first").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let update = response.data.weather[0].main;
+  let wind = Math.round(response.data.wind.speed);
+  let humidity = response.data.main.humidity;
+  document.querySelector("#heading-first").innerHTML = response.data.name;
   document.querySelector(
     "#heading-third"
   ).innerHTML = `${update} ${temperature}°C`;
-  let wind = Math.round(response.data.wind.speed);
   let windheading = document.querySelector("#wind");
   windheading.innerHTML = `Wind: ${wind} km/h`;
-  let humidity = response.data.main.humidity;
   let humidityheading = document.querySelector("#humidity");
   humidityheading.innerHTML = `Humidity: ${humidity}%`;
 }
@@ -49,15 +49,15 @@ function showTemperature(response) {
   let currentTemperature = Math.round(response.data.main.temp);
   let currentUpdate = response.data.weather[0].main;
   let currentWind = Math.round(response.data.wind.speed);
-  let currentWindheading = document.querySelector("#wind");
-  currentWindheading.innerHTML = `Wind: ${currentWind} km/h`;
   let currentHumidity = response.data.main.humidity;
-  let currentHumidityheading = document.querySelector("#humidity");
-  currentHumidityheading.innerHTML = `Humidity: ${currentHumidity}%`;
   let currentCountry = response.data.sys.country;
+  let currentWindheading = document.querySelector("#wind");
+  let currentHumidityheading = document.querySelector("#humidity");
   let countryHeading = document.querySelector("#heading-first");
-  countryHeading.innerHTML = `${currentCountry}`;
   let heading = document.querySelector("#heading-third");
+  currentWindheading.innerHTML = `Wind: ${currentWind} km/h`;
+  currentHumidityheading.innerHTML = `Humidity: ${currentHumidity}%`;
+  countryHeading.innerHTML = `${currentCountry}`;
   heading.innerHTML = `${currentUpdate} ${currentTemperature}°C`;
 }
 function showPosition(position) {
