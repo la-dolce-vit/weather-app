@@ -11,9 +11,15 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-let time = document.querySelector("#heading-second");
-time.innerHTML = `${day} ${hour}:${minutes}`;
-
+document.querySelector(
+  "#heading-second"
+).innerHTML = `${day} ${hour}:${minutes}`;
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 function displayWeather(response) {
   document.querySelector("#heading-first").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
@@ -21,9 +27,9 @@ function displayWeather(response) {
   document.querySelector(
     "#heading-third"
   ).innerHTML = `${update} ${temperature}°C`;
-  let wind = response.data.wind.speed;
+  let wind = Math.round(response.data.wind.speed);
   let windheading = document.querySelector("#wind");
-  windheading.innerHTML = `Wind: ${wind}km/h`;
+  windheading.innerHTML = `Wind: ${wind} km/h`;
   let humidity = response.data.main.humidity;
   let humidityheading = document.querySelector("#humidity");
   humidityheading.innerHTML = `Humidity: ${humidity}%`;
@@ -42,9 +48,9 @@ form.addEventListener("submit", search);
 function showTemperature(response) {
   let currentTemperature = Math.round(response.data.main.temp);
   let currentUpdate = response.data.weather[0].main;
-  let currentWind = response.data.wind.speed;
+  let currentWind = Math.round(response.data.wind.speed);
   let currentWindheading = document.querySelector("#wind");
-  currentWindheading.innerHTML = `Wind: ${currentWind}km/h`;
+  currentWindheading.innerHTML = `Wind: ${currentWind} km/h`;
   let currentHumidity = response.data.main.humidity;
   let currentHumidityheading = document.querySelector("#humidity");
   currentHumidityheading.innerHTML = `Humidity: ${currentHumidity}%`;
