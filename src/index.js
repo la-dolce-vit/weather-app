@@ -31,8 +31,13 @@ function displayWeather(response) {
   ).innerHTML = `${update} ${temperature}°C`;
   let windheading = document.querySelector("#wind");
   windheading.innerHTML = `Wind: ${wind} km/h`;
+  let icon = document.querySelector("#heading-null");
   let humidityheading = document.querySelector("#humidity");
   humidityheading.innerHTML = `Humidity: ${humidity}%`;
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function search(event) {
   event.preventDefault();
@@ -55,10 +60,15 @@ function showTemperature(response) {
   let currentHumidityheading = document.querySelector("#humidity");
   let countryHeading = document.querySelector("#heading-first");
   let heading = document.querySelector("#heading-third");
+  let currentIcon = document.querySelector("#heading-null");
   currentWindheading.innerHTML = `Wind: ${currentWind} km/h`;
   currentHumidityheading.innerHTML = `Humidity: ${currentHumidity}%`;
   countryHeading.innerHTML = `${currentCountry}`;
   heading.innerHTML = `${currentUpdate} ${currentTemperature}°C`;
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function showPosition(position) {
   let latitude = position.coords.latitude;
