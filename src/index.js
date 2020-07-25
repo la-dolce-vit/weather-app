@@ -21,6 +21,12 @@ function displayWeather(response) {
   document.querySelector(
     "#heading-third"
   ).innerHTML = `${update} ${temperature}°C`;
+  let wind = response.data.wind.speed;
+  let windheading = document.querySelector("#wind");
+  windheading.innerHTML = `Wind: ${wind}km/h`;
+  let humidity = response.data.main.humidity;
+  let humidityheading = document.querySelector("#humidity");
+  humidityheading.innerHTML = `Humidity: ${humidity}%`;
 }
 function search(event) {
   event.preventDefault();
