@@ -57,6 +57,7 @@ input {
   margin: 0 auto;
   text-align: center;
   font-size: 16px;
+  font-weight: 500;
 }
 
 #heading-null {
@@ -64,7 +65,6 @@ input {
   margin-top: 5px;
 }
 #heading-first {
-  font-weight: 500;
   margin-bottom: 2px;
 }
 #heading-third {
