@@ -31,7 +31,7 @@ function displayWeather(response) {
   ).innerHTML = `${update} ${temperature}°C`;
   let windheading = document.querySelector("#wind");
   windheading.innerHTML = `Wind: ${wind} km/h`;
-  let icon = document.querySelector("#heading-null");
+  let icon = document.querySelector("#icon");
   let humidityheading = document.querySelector("#humidity");
   humidityheading.innerHTML = `Humidity: ${humidity}%`;
   icon.setAttribute(
