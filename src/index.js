@@ -39,12 +39,12 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
 function search(event) {
   event.preventDefault();
   let apiKey = "3346c88ffb76a2a6dc2fd658bc17450a";
   let city = document.querySelector("#input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeather);
 }
 let form = document.querySelector("#search-form");

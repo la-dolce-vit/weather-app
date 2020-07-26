@@ -43,15 +43,7 @@ i {
 input {
   outline: 0;
 }
-.days {
-  color: #323232;
-  font-size: 15px;
-  margin-top: 15px;
-}
-.celsius {
-  color: #757575;
-  font-size: 13px;
-}
+
 .headings {
   color: #323232;
   margin: 0 auto;
@@ -59,13 +51,14 @@ input {
   font-size: 16px;
   font-weight: 500;
 }
-#heading-null {
-  margin-bottom: 7px;
-  margin-top: 5px;
+#icon {
+  margin-top: 10px;
   font-size: 1px;
+  height: 60px;
+  width: 60px;
 }
 #heading-first {
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 #heading-third {
   margin-top: 15px;
@@ -82,5 +75,7 @@ input {
 
 #signature {
   text-align: center;
-  font-size: 15px;
+}
+#wind {
+  margin-bottom: 10px;
 }
