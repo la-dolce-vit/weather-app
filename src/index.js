@@ -60,7 +60,7 @@ function showTemperature(response) {
   let currentHumidityheading = document.querySelector("#humidity");
   let countryHeading = document.querySelector("#heading-first");
   let heading = document.querySelector("#heading-third");
-  let currentIcon = document.querySelector("#heading-null");
+  let currentIcon = document.querySelector("#icon");
   currentWindheading.innerHTML = `Wind: ${currentWind} km/h`;
   currentHumidityheading.innerHTML = `Humidity: ${currentHumidity}%`;
   countryHeading.innerHTML = `${currentCountry}`;
